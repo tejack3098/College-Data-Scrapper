@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Short Listed Colleges</title>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/result.css">
+</head>
+<body>
+  <div class="table-responsive">
+     <div class="container">
+
+      <div class="starter-template">
+        <h1><STRONG><I>THIS IS WHAT WE FOUND FOR YOU...</I></STRONG></h1>
+      </div>
+            <table class="table table-striped" style="width:100%">
+              
+  <!--<table style="width:100%">-->
+    <htable>
+  <tr>
+    <th>Name</th>
+    <th>Locality</th> 
+    <th>Course</th>
+    <th>Fees</th>
+    <th>Exam</th>
+    <th>Affiliation</th>
+    <th>Facilities</th>
+  </tr>
+   </htable>
+  {%for i in a%}
+    <tr>
+      <td><b>{{i[2]}}</b></td>
+      <td>{{i[3]}}</td>
+      <td>{{i[4]}}</td>
+      <td>₹ {{i[5]}}</td>
+      <td>{{i[6]}}</td>
+      <td>{{i[7]}}</td>
+      <td>{{i[9]}}</td>
+    </tr>
+  {% endfor %}
+  
+</table>
+</div>
+</body>
+</html

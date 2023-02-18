@@ -1,0 +1,78 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='dashboard.css')}}">
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">College Finder</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Dashboard</a></li>
+           <!-- <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>-->
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+          </ul>
+         <!-- <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form>-->
+        </div>
+      </div>
+    </nav>
+
+  <!--  <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
+          </ul>
+        </div>-->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Welcome, {{ name }}</h1>
+
+          <div class="row placeholders">
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <img src="https://www.oftc.edu/wp-content/uploads/2017/10/IMG_4151-2_resize.jpg" width="500" height="500" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h1>Engineering</h1>
+              <span class="text-muted"><a href="http://127.0.0.1:5000/engineeringcolleges">Enter Here</a> </span>
+            </div>
+          <!--  <div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Engineering Entrance Exams</h4>
+              <span class="text-muted"></span>
+            </div>-->
+            <div class="col-xs-6 col-sm-6 placeholder">
+              <img src="https://previews.123rf.com/images/stockasso/stockasso1611/stockasso161100033/65343880-engineering-students-working-in-the-lab-a-student-is-using-a-voltage-and-current-tester-another-stud.jpg" width="500" height="500" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h1>Medical</h1>
+              <span class="text-muted"><a href="http://127.0.0.1:5000/medicalcolleges">Enter Here</a> </span>
+            </div>
+            <!--<div class="col-xs-6 col-sm-3 placeholder">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+              <h4>Medical Entrance Exams</h4>
+              <span class="text-muted"></span>
+            </div>
+          </div>-->
+
+          <h2 class="sub-header">Choose Your stream above....  </h2>
+
+          
+          
+{% endblock %}
